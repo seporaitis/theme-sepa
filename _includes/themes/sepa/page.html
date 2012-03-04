@@ -1,0 +1,28 @@
+<ol id="posts">
+    <li class="post">
+        <div class="entry">
+            <div class="content">
+                {{content}}
+            </div>
+        </div>
+    </li>
+    <li class="post">
+        <div class="entry">
+            <div class="footer">
+                <p>
+                    {{site.author.name}}</p>
+                <p>
+                    <a href="mailto:{{site.author.email}}"
+                       class="icon-email">{{site.author.email}}</a></p>
+                <p>
+                    <a href="http://github.com/{{site.author.github}}/"
+                       class="icon-github">github.com/{{site.author.github}}</a>
+                    <a href="http://twitter.com/{{site.author.twitter}}"
+                       class="icon-twitter">twitter.com/{{site.author.twitter}}</a>
+                    <a href="http://feeds.feedburner.com/{{site.author.feedburner}}"
+                       class="icon-rss">feeds.feedburner.com/{{site.author.feedburner}}</a>
+                </p>
+            </div>
+        </div>
+    </li>
+</ol>

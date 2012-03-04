@@ -1,0 +1,55 @@
+<ol id="posts">
+    <li class="post">
+        <div class="entry">
+            <div class="header">
+                <a class="date" href="#" data-date="{{ page.date | date_to_xmlschema }}">
+                    <div class="top ribbon"></div>
+                    <div class="bottom ribbon"></div>
+                    <div class="tail ribbon">
+                        <div class="left ribbon"></div>
+                        <div class="right ribbon"></div>
+                    </div>
+                </a>
+                <script>
+                    $(function() {
+                    $(this).parent().find("a.date .top").html("Trololo");
+                    });
+                </script>
+                <h1 class="title">
+                    <a href="#">{{ page.title }}</a>
+                </h1>
+            </div>
+            <div class="content">{{ content }}</div>
+            <div class="footer">
+                <div class="info">
+                    <p>Posted <abbr title="{{ page.date | date_to_long_string }}">
+                            {{ page.date | date_to_long_string }}
+                        </abbr>
+                        by <span class="author">Julius Seporaitis</span></p>
+                </div>
+            </div>
+        </div>
+        <span id="disqus"></span>
+        {% include JB/comments %}
+
+    </li>
+    <li class="post">
+        <div class="entry">
+            <div class="footer">
+                <p>
+                    {{site.author.name}}</p>
+                <p>
+                    <a href="mailto:{{site.author.email}}"
+                       class="icon-email">{{site.author.email}}</a></p>
+                <p>
+                    <a href="http://github.com/{{site.author.github}}/"
+                       class="icon-github">github.com/{{site.author.github}}</a>
+                    <a href="http://twitter.com/{{site.author.twitter}}"
+                       class="icon-twitter">twitter.com/{{site.author.twitter}}</a>
+                    <a href="http://feeds.feedburner.com/{{site.author.feedburner}}"
+                       class="icon-rss">feeds.feedburner.com/{{site.author.feedburner}}</a>
+                </p>
+            </div>
+        </div>
+    </li>
+</ol>
